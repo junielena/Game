@@ -1,0 +1,22 @@
+.gameContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    margin-top: 300px;
+    width: 380px;
+    
+
+  }
+  .gameSquare {
+    background-color: aquamarine;
+    border: 2.5px solid black;
+    font-size: 10px;
+    height: 120px;
+   
+    
+  }
+
+  body{
+    background-color: darkgrey;
+   cursor: pointer;
+  }
