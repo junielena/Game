@@ -7,7 +7,12 @@ function handleClick(event) {
     const square = event.target;
     square.textContent = currentPlayer;
     currentPlayer = currentPlayer === 'X' ? 'O': 'X';
-    displayWinner();
+    if(checkWinningCondition()){
+        alert('${currentPlayer} won!');
+    }
+    
+    currentPlayer = currentPlayer ===
+    players[0] ? players[1] : players[0];
 }
 
 function clearBoard(){
@@ -37,27 +42,24 @@ function checkForWinner() {
   ];
 
 
-  for (let i = 0; i < winningConditions.length; i++) {
-    const [a, b, c] = winningConditions[i];
+  for (let i = 0; i < winningCombination.length; i++) {
+    const [a, b, c] = winningCombination[i];
     if (squares[a].textContent === 
-        squares[b].textContent && 
-        squares[a].textContent === 
-        squares[c].textContent && 
-        squares[a].textContent !== "") {
-      return true;
+        currentPlayer &&
+        squares[b].textContent ===
+        currentPlayer &&
+        squares[c].textContent ===
+        currentPlayer){
+            return true;
+
+        } 
+        
     }
-  }
+
   return false;
 }
 
-function displayWinner(){
-    const winner = checkForWinner();
-    if (winner) {
-        const message = 'Player ${currentPlayer} wins!';
-        document.querySelector('.result').textContent = message;
-    }
-}
- 
+
 const clearButton =
 document.querySelector('#clear-button');
 clearButton.addEventListener('click', clearBoard);
