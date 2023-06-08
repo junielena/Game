@@ -26,8 +26,7 @@ h1{
 
 #clear-button {
   display: block;
-  margin-top: 630px;
-  margin-left: 550px;
+  margin: auto;
   padding: 13px 40px;
   border: 2px solid;
   font-size: 20px;
