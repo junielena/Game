@@ -20,15 +20,14 @@
 }
 
 h1{
-  margin-top: 630px;
-  margin-left: 550px
   text-align: center;
   font-size: 90px;
 }
 
 #clear-button {
   display: block;
-  margin: auto;
+  margin-top: 630px;
+  margin-left: 550px;
   padding: 13px 40px;
   border: 2px solid;
   font-size: 20px;
